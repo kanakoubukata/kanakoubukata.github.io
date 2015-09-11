@@ -1,0 +1,24 @@
+﻿body {
+    /* スクロールバーを表示するために、高さを多く取っておく */
+    height: 5000px;
+}
+/* 画像の親要素 */
+div {
+    /* スクロールしても画像をウィンドウ左上に固定表示する設定 */
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    height: 600px;     /* 画像と同じ高さを設定 */
+}
+div img{
+    height: 600px;
+}
+/* 背面の要素を囲むdiv要素 */
+#under {
+    z-index: 1;        /* 背面に表示 */
+}
+/* 前面の要素を囲むdiv要素 */
+#over {
+    z-index: 2;        /* 前面に表示 */
+    overflow: hidden;  /* 要素からはみだした部分は非表示 */
+}
