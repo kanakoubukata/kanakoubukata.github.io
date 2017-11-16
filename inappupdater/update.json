@@ -1,17 +1,17 @@
 {
   "ios": {
     "1.0.0": {
-      "1": { // update number
+      "1": {
         "date": 20170113,
         "url": "https://hogehoge.com/app/1/ios-v2.1.0.zip"
       },
-      "2": { // update number
+      "2": {
         "date": 20170113,
         "url": "https://hogehoge.com/app/2/ios-v2.1.0.zip"
       }
     },
     "1.0.1": {
-      "1": { // update number
+      "1": {
         "date": 20170210,
         "url": "https://hogehoge.com/app/1/ios-v2.2.0.zip"
       }
