@@ -1,37 +1,37 @@
 {
   "ios": {
-    "1.0.0": {　// app version
+    "1.0.0": {
       "1": { // update number
         "date": 20170113,
-        "url": "https://hogehoge.com/app/1/ios-v2.1.0.zip" //  This parameter is optional.
+        "url": "https://hogehoge.com/app/1/ios-v2.1.0.zip"
       },
       "2": { // update number
         "date": 20170113,
-        "url": "https://hogehoge.com/app/2/ios-v2.1.0.zip" //  This parameter is optional.
+        "url": "https://hogehoge.com/app/2/ios-v2.1.0.zip"
       }
     },
-    "1.0.1": {　// app version
+    "1.0.1": {
       "1": { // update number
         "date": 20170210,
-        "url": "https://hogehoge.com/app/1/ios-v2.2.0.zip" //  This parameter is optional.
+        "url": "https://hogehoge.com/app/1/ios-v2.2.0.zip"
       }
     }
   },
   "android": {
-    "1.0.0": {　// app version
-      "1": { // update number
+    "1.0.0": {
+      "1": {
         "date": 20170113,
-        "url": "https://hogehoge.com/app/1/ios-v2.1.0.zip" //  This parameter is optional.
+        "url": "https://hogehoge.com/app/1/android-v2.1.0.zip"
       },
-      "2": { // update number
+      "2": {
         "date": 20170113,
-        "url": "https://hogehoge.com/app/2/ios-v2.1.0.zip" //  This parameter is optional.
+        "url": "https://hogehoge.com/app/2/android-v2.1.0.zip"
       }
     },
-    "1.0.1": {　// app version
-      "1": { // update number
+    "1.0.1": {
+      "1": {
         "date": 20170210,
-        "url": "https://hogehoge.com/app/1/ios-v2.2.0.zip" //  This parameter is optional.
+        "url": "https://hogehoge.com/app/1/android-v2.2.0.zip"
       }
     }
   }
