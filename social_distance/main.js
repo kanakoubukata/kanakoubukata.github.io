@@ -5,28 +5,28 @@ document.addEventListener("DOMContentLoaded", () => {
   canvas.width = 800;
   canvas.height = 400;
   
-  document.querySelector('#btn-apply').addEventListener('click', () => {
+  document.querySelector('#params').addEventListener('submit', (event) => {
+    // submitのキャンセル
+    event.stopPropagation();
+    event.preventDefault();
+    
     let row, col;
     const roomWidth = document.querySelector('#room-width').value;
     const roomHeight = document.querySelector('#room-height').value;
     const workPeople = document.querySelector('#work-people').value;
     
     // 最適列数を計算
-    const baseCol = Math.sqrt(roomWidth * workPeople / roomHeight)    
-    if(isNaN(baseCol)) {
-      alert('入力値が不正です');
-      return;
-    }
+    const baseCol = Math.abs(Math.sqrt(roomWidth * workPeople / roomHeight));
     
     // 最適列数付近の整数を2つ取得
-    const tmpCol1 = Math.floor(baseCol);
+    const tmpCol1 = Math.floor(baseCol) == 0 ? 1 : Math.floor(baseCol);
     const tmpCol2 = Math.ceil(baseCol);
     
     // 最適列数付近の整数から、行数の組み合わせを算出（人数が入り切るように小数点以下繰り上げ）
     const tmpRow1 = Math.ceil(workPeople / tmpCol1);
-    const tmpRow2 = Math.ceil(workPeople / tmpCol2)
+    const tmpRow2 = Math.ceil(workPeople / tmpCol2);
     
-    // 2パターンの行列から、部屋の比率に近い方を採用
+    // 2パターンの行列数の組み合わせから、部屋の比率に近い方を採用
     const roomRatio = roomWidth / roomHeight;
     const tmpRatio1 = tmpCol1 / tmpRow1;
     const tmpRatio2 = tmpCol2 / tmpRow2;

@@ -12,12 +12,14 @@
 <body>
   <aside>
     <nav>
-      <ul>
-      <li>ヨコ<input id="room-width" type="text">m</li>
-      <li>タテ<input id="room-height" type="text">m</li>
-      <li>出勤<input id="work-people" type="text">人</li>
-      </ul>
-      <button id="btn-apply">適用</button>
+      <form id="params">
+        <ul>
+        <li>横幅 <input id="room-width" type="number" min="0" step="0.1" required> m</li>
+        <li>縦幅 <input id="room-height" type="number" min="0" step="0.1" required> m</li>
+        <li>出勤 <input id="work-people" type="number" min="0" step="1" required> 人</li>
+        </ul>
+        <input type="submit" value="適用">
+      </form>
     </nav>
   </aside>
   <main>
