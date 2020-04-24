@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     // 描画
     context.globalAlpha = 0.5;
-    context.fillStyle = 'red';    
+    context.fillStyle = 'red';
     let drawCount = 0;
     for(let r = 0; r < row; r++) {
       for(let c = 0; c < col && drawCount < workPeople; c++, drawCount++) {
@@ -66,5 +66,5 @@ document.addEventListener("DOMContentLoaded", () => {
         context.fill();                
       }
     }
-  });
+  }, {passive: false});
 });
