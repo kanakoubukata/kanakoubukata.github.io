@@ -11,7 +11,8 @@ body {
 aside {
   background-color: #cccccc;
   box-sizing : border-box;
-  width: 200px;
+  width: 220px;
+  padding: 6px;
   text-align: center;
 }
 main {
@@ -22,13 +23,17 @@ canvas#canvas-area {
   margin: 5px;
   border: solid 1px #999999;
 }
-ul {
+.input-group-prepend, .input-group-append {
+  width: 16%;
+}
+.input-group-text {
+  width: 100%;
+  padding: 0;
   margin: 0;
-  padding: 5px;
 }
-li {
-  list-style-type: none;
-}
-input {
-  width: 50%;
+i {
+  left: 0;
+  right: 0;
+  margin: auto;
+  font-style: normal;
 }

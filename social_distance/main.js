@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const workPeople = document.querySelector('#work-people').value;
     
     // 最適列数を計算
-    const baseCol = Math.abs(Math.sqrt(roomWidth * workPeople / roomHeight));
+    const baseCol = Math.sqrt(roomWidth * workPeople / roomHeight);
     
     // 最適列数付近の整数を2つ取得
     const tmpCol1 = Math.floor(baseCol) == 0 ? 1 : Math.floor(baseCol);
@@ -40,6 +40,9 @@ document.addEventListener("DOMContentLoaded", () => {
       col = tmpCol2;
     }
     
+    // キャンバスをクリア
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    
     // 部屋の比率に合わせてキャンバスの比率を変更
     const canvasHeight = roomHeight / roomWidth * canvas.width;
     canvas.height = canvasHeight;
@@ -56,9 +59,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // 描画
     context.globalAlpha = 0.5;
     context.fillStyle = 'red';
-    let drawCount = 0;
+    let circleCount = 0;
     for(let r = 0; r < row; r++) {
-      for(let c = 0; c < col && drawCount < workPeople; c++, drawCount++) {
+      for(let c = 0; c < col && circleCount < workPeople; c++, circleCount++) {
         let x = (c * cellWidth) + centerPointX;
         let y = (r * cellHeight) + centerPointY;
         context.beginPath();

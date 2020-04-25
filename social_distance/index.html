@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="ja">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>p5.js example</title>
+  <title>ソーシャルディスタンス可視化</title>
+  <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="fontawesome-free-5.13.0-web/css/all.min.css">
   <link rel="stylesheet" href="style.css">
   <script src="main.js"></script>
 </head>
@@ -13,12 +15,34 @@
   <aside>
     <nav>
       <form id="params">
-        <ul>
-        <li>横幅 <input id="room-width" type="number" min="0" step="0.1" required> m</li>
-        <li>縦幅 <input id="room-height" type="number" min="0" step="0.1" required> m</li>
-        <li>出勤 <input id="work-people" type="number" min="0" step="1" required> 人</li>
-        </ul>
-        <input type="submit" value="適用">
+        <div class="input-group mb-1">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fas fa-arrows-alt-h"></i></span>
+          </div>
+          <input id="room-width" type="number" min="1" step="0.1" required class="form-control" placeholder="横幅">
+          <div class="input-group-append">
+            <span class="input-group-text"><i>m</i></span>
+          </div>
+        </div>
+        <div class="input-group mb-1">
+          <div class="input-group-prepend">
+            <div class="input-group-text"><i class="fas fa-arrows-alt-v"></i></div>
+          </div>
+          <input id="room-height" type="number" min="1" step="0.1" required class="form-control" placeholder="縦幅">
+          <div class="input-group-append">
+            <span class="input-group-text"><i>m</i></span>
+          </div>
+        </div>        
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fas fa-users"></i></span>
+          </div>
+          <input id="work-people" type="number" min="1" step="1" required class="form-control" placeholder="人数">
+          <div class="input-group-append">
+            <span class="input-group-text"><i>人</i></span>
+          </div>
+        </div>
+        <input type="submit" value="適用" class="btn btn-primary">
       </form>
     </nav>
   </aside>
