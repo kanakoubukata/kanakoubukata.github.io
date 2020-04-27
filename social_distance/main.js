@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
   
   const canvas = document.querySelector('#canvas-area');
   const context = canvas.getContext('2d');
-  canvas.width = 800;
-  canvas.height = 400;
+  canvas.width = 600;
+  canvas.height = 300;
   
   document.querySelector('#params').addEventListener('submit', (event) => {
     // submitのキャンセル
@@ -70,4 +70,9 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   }, {passive: false});
+  
+  document.querySelector('#params').addEventListener('reset', (event) => {
+    // キャンバスをクリア
+    context.clearRect(0, 0, canvas.width, canvas.height);
+  });
 });

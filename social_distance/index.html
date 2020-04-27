@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ソーシャルディスタンス可視化</title>
+  <title>ソーシャルディスタンス見える化くん</title>
   <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="fontawesome-free-5.13.0-web/css/all.min.css">
   <link rel="stylesheet" href="style.css">
@@ -12,8 +12,13 @@
 </head>
 
 <body>
-  <aside>
-    <nav>
+  <header>
+    <h1>ソーシャルディスタンス見える化くん</h1>
+    <p><small>空間の大きさに対して、一人あたり半径1m相当の円を表示します。</small></p>
+    <p><small>円が重ならないように人数を調整し、適切なソーシャルディスタンスを保ちましょう。</small></p>
+  </header>
+  <section>
+    <aside>
       <form id="params">
         <div class="input-group mb-1">
           <div class="input-group-prepend">
@@ -43,12 +48,13 @@
           </div>
         </div>
         <input type="submit" value="適用" class="btn btn-primary">
+        <input type="reset" value="クリア" class="btn btn-primary">
       </form>
-    </nav>
-  </aside>
-  <main>
-    <canvas id="canvas-area"></canvas>
-  </main>
+    </aside>
+    <main>
+      <canvas id="canvas-area"></canvas>
+    </main>
+  </section>
 </body>
 
 </html>

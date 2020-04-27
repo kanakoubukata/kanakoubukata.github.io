@@ -5,18 +5,27 @@ html, body {
   width: auto;
 }
 body {
-  display: flex;
-  align-items: stretch;
 }
 aside {
-  background-color: #cccccc;
+  background-color: #999999;
   box-sizing : border-box;
   width: 220px;
   padding: 6px;
   text-align: center;
 }
-main {
-  overflow-y: scroll;
+section {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  height: 100%;
+}
+header {
+  background-color: #333333;
+  color: #ffffff;
+  padding: 12px 20px 20px 20px;
+}
+p {
+  margin: 0;
 }
 canvas#canvas-area {
   box-sizing : border-box;
@@ -24,7 +33,7 @@ canvas#canvas-area {
   border: solid 1px #999999;
 }
 .input-group-prepend, .input-group-append {
-  width: 16%;
+  width: 20%;
 }
 .input-group-text {
   width: 100%;
