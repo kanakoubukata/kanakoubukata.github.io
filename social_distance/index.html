@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="fontawesome-free-5.13.0-web/css/all.min.css">
   <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
   <script src="main.js"></script>
 </head>
 
@@ -20,11 +22,12 @@
   <section>
     <aside>
       <form id="params">
+        <label>Parameter</label>
         <div class="input-group mb-1">
           <div class="input-group-prepend">
             <span class="input-group-text"><i class="fas fa-arrows-alt-h"></i></span>
           </div>
-          <input id="room-width" type="number" min="1" step="0.1" required class="form-control" placeholder="横幅">
+          <input id="width" type="number" min="1" step="0.1" required class="form-control" placeholder="横幅">
           <div class="input-group-append">
             <span class="input-group-text"><i>m</i></span>
           </div>
@@ -33,7 +36,7 @@
           <div class="input-group-prepend">
             <div class="input-group-text"><i class="fas fa-arrows-alt-v"></i></div>
           </div>
-          <input id="room-height" type="number" min="1" step="0.1" required class="form-control" placeholder="縦幅">
+          <input id="height" type="number" min="1" step="0.1" required class="form-control" placeholder="縦幅">
           <div class="input-group-append">
             <span class="input-group-text"><i>m</i></span>
           </div>
@@ -42,17 +45,19 @@
           <div class="input-group-prepend">
             <span class="input-group-text"><i class="fas fa-users"></i></span>
           </div>
-          <input id="work-people" type="number" min="1" step="1" required class="form-control" placeholder="人数">
+          <input id="people" type="number" min="1" step="1" required class="form-control" placeholder="人数">
           <div class="input-group-append">
             <span class="input-group-text"><i>人</i></span>
           </div>
         </div>
-        <input type="submit" value="適用" class="btn btn-primary">
-        <input type="reset" value="クリア" class="btn btn-primary">
+        <hr class="my-2">
+        <input type="submit" value="適用" class="btn btn-primary m-1" id="btn-submit">
+        <input type="reset" value="クリア" class="btn btn-primary m-1">
       </form>
     </aside>
     <main>
       <canvas id="canvas-area"></canvas>
+      <button id="btn-magic" class="btn btn-primary rounded-circle p-0"><i class="fas fa-magic"></i></button>
     </main>
   </section>
 </body>
