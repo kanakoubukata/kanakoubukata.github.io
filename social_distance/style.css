@@ -9,14 +9,14 @@ aside {
   box-sizing : border-box;
   min-width: 220px;
   width: 220px;
-  height: 100%;
+  min-height: 100%;
   padding: 6px 16px;
   text-align: center;
 }
 section {
   display: flex;
   align-items: stretch;
-  height: 100%;
+  min-height: 100%;
 }
 header {
   background-color: #333333;
