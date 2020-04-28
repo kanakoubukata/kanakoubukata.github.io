@@ -52,14 +52,12 @@ i {
   margin: auto;
   font-style: normal;
 }
-button {
-  width: 2.6rem;
-  height: 2.6rem;
-}
 #btn-magic {
   position: fixed;
-  left: 20px;
-  bottom: 20px;
+  width: 48px;
+  height: 48px;
+  right: 30px;
+  bottom: 30px;
 }
 #forPortraitStyle {
   z-index: 9999;
@@ -76,5 +74,5 @@ button {
   text-align: center;
 }
 @media screen and (orientation: portrait) {
-   #forPortraitStyle { display: flex; }
+  #forPortraitStyle { display: flex; }
 }
