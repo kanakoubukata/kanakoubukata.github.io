@@ -54,10 +54,11 @@ i {
 }
 #btn-magic {
   position: fixed;
-  width: 48px;
-  height: 48px;
-  right: 30px;
-  bottom: 30px;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  right: 24px;
+  bottom: 24px;
 }
 #forPortraitStyle {
   z-index: 9999;
